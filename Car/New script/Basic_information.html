@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html leng="ru">
+<head>
+	<title>Script CarPrice</title>
+	<meta charset="utf=8" content="text/html;">
+	<link href="New script.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!--Блок центрального меню-->
+	<ul id="menu" class="menu">
+			<h2 id="logo" style="position: absolute; margin-left: 25px; margin-top: 8px;"><a style="color: #ffffff">Car</a><a style="color: #38b86f;">Price</a><a style="color: #a5a5a5">.ru</a></h2>
+			<li style="margin-left: 320px"><a href="Dialog.html">Диалог</a></li>
+			<li><a href="Basic_information.html">Основная информация</a></li>
+			<li><a href="Objections.html">Возражения</a></li>
+			<li><a href="">Другое</a>
+				<ul>
+					<li><a href="Car_model.html" style="margin-left: -40px;">Марки авто</a></li>
+					<li><a href="" style="margin-left: -40px;">Критерии лида</a></li>
+					<li><a href="" style="margin-left: -40px;">Полезные ссылки</a></li>
+				</ul>
+			</li>
+		<div id="img" class="color-panel"><input src="Image/Color.png" type="image" style="width: 25px; background: transparent; margin-left: 145px; margin-top: 6px;" onclick="document.getElementById('DivColor').hidden = false;"></div>
+		<div id="DivColor" style="margin-left: 800px; margin-top: -26px; background: transparent; width:120px; border: 4px;"hidden="true">
+				<button style="color: #000000; background: transparent; border: 0px;" onclick="clickcolorBleck()">Text</button>
+				<button style="color: #efefef; background: transparent; border: 0px;" onclick="clickcolorWhite()">Text</button>
+				<button style="color: #33c2ea; background: transparent; border: 0px;" onclick="clickcolorBlue()">Text</button>
+				</div>
+		</ul>
+		<!--Кнопка наверх-->
+		<div id="up" align="center"><a href="#" style="color: #efefef;">&#11014;</a><br/></div>
+<!--Блок сайта-->
+	<!--Основной блок контента-->
+	<div id="Content" style="height: 1750px;">
+			<!--Блок вопросов-->
+			<div id="DivCenter">
+				<div style="height: 1px"></div>
+				<div style="margin-left: 15px; height: 411px">
+					-------------------------------------------------------------------------------------------------------------------
+				<b>Вопросы, которые клиент может спросить у оператора</b style="font-size: 30px"></br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="SiteName">А назовите ваш сайт?</b></br>
+				https://www.carprice.ru</br>
+				С какого офиса вы звоните? </br>
+				"Москва, ул. 2-я Хуторская, 38 А, с.9,</br>
+				тел.: +7 (495) 134-68-68"</br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="electronPTS">А можно предоставить электронный ПТС?</b> </br>
+				У вас оформлен электронный ПТС, который отображается на сайте гос. услуг, верно? - Да</br>
+				 То есть у вас есть подтвержденная запись на сайте гос. услуг? - да. </br>
+				Тогда, конечно вы можете предоставить электронный ПТС.</br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="fine">У меня есть неоплаченные штрафы?</b></br>
+				штрафы могут оплатить на месте, как и есть услуга по выкупу авто с запретом. Вас сможет полностью проконсультировать по этому вопросу менеджер в отделении, и если будете готовы оплатить на месте, после заключения сделки, то все решите уже сразу там. Согласны?</br>
+				Хорошо, а автомобиль не в кредите или лизинге ? (с лизингом не работаем)</br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="power of attorney">Какую доверенность необходимо оформить для участие в аукционе от лица собственника?</b> </br>
+				Общую генеральную доверенность на право продажи автомобиля, в которой зафиксированы  полномочия представителя совершать сделки или иные правомерные действия от имени другого лица доверителя, обязательно оформленную нотариусом</br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="year of issue">Какие есть ограничения по году выпуска?</b> </br>
+				<y style="color: #8e8e8e">ВАЖНО Изменение по работе с автомобилями не на ходу (машина подлежит восстановлению)</y>:</br>
+				1. Для выездного осмотра остаются критерии : иномарки (кроме китайских) – не старше 10 лет,</br>
+				отечественные, Китай - не старше 5 лет.</br>
+				2. Если клиент хочет привезти авто не на ходу НА локацию - то никаких критериев по году выпуска нет.</br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="engine">А возможно продать автомобиль через карпрайс в случае замены двигателя в автомобиле?</b></br>
+				Чтобы продать автомобиль через наш сервис нужно в ПТС поставить штамп ГИБДД с этим номером, либо предоставить договор на покупку агрегата с номерами и печатями продавца.</br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="inspection">Что в себя включает осмотр?</b></br>
+				Специалисты внимательно осматривают Ваш автомобиль: состояние кузова, салона, мотора, коробки передач, подвески, электрики, учитывают наличие гарантии, сервисной книжки, перепробега и др., а также проводят тест-драйв.</br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="money">Каким образом я получу деньги за свой автомобиль?</b></br>
+				Мы предлагаем несколько вариантов оплаты Вашего автомобиля:</br>
+				1) Моментальный перевод на карту в течение 10 минут (не более 3 млн руб, есть ограничения по разным видам карт)</br>
+				2) Денежный перевод на Ваш счет в банке в течение четырех банковских дней.</br>
+				-------------------------------------------------------------------------------------------------------------------
+				
+				<b id="DPK">ДКП</b> - это договор купли-продажи. Если клиент имеет на руках такой договор и не вписан в ПТС - с такими клиентами мы не работаем. Работаем только в том случае, если клиент поставит автомобиль на учет в ГИБДД на своё имя и впишется в ПТС (Исключений нет!)</br>
+
+				</div>
+			</div>
+	
+			<!--Блок бокового меню-->
+			<div id="DivLeft" style="margin-top: -42.6%;">
+					<hr/>
+					<a class="LeftMenu" href="#SiteName">А назовите ваш сайт?</a><br/>
+					<hr/>
+					<a class="LeftMenu" href="#electronPTS" onclick="clickQuestion()">А можно предоставить электронный ПТС?</a><br/>
+					<hr/>
+					<a class="LeftMenu" href="#fine" onclick="clickbranch()">У меня есть неоплаченные штрафы</a><br/>
+					<hr/>
+					<a class="LeftMenu" href="#power of attorney" onclick="clickMenegher()">Какую доверенность необходимо оформить для участие в аукционе от лица собственника?</a>
+					<hr/>
+					<a class="LeftMenu" href="#year of issue" onclick="clickMenegher()">Какие есть ограничения по году выпуска?</a>
+					<hr/>
+					<a class="LeftMenu" href="#engine" onclick="clickMenegher()">А возможно продать автомобиль через карпрайс в случае замены двигателя в автомобиле?</a>
+					<hr/>
+					<a class="LeftMenu" href="#inspection" onclick="clickMenegher()">Что в себя включает осмотр?</a>
+					<hr/>
+					<a class="LeftMenu" href="#money" onclick="clickMenegher()">Каким образом я получу деньги за свой автомобиль?</a>
+					<hr/>
+					<a style="color: #efefef"><b>Абривиатуры</b></a>
+					<hr/>
+					<a class="LeftMenu" href="#DPK" onclick="clickMenegher()">ДКП</a>
+					<hr/>
+			</div>
+			<!--Блокнот-->	
+			<div id="DivRight">
+				<textarea id="note" name="comment" placeholder="Поле для заметок (НА ДОРАБОТКЕ)" style="background: #a0a0a0"></textarea>
+				<input id="noteSave" type="button" value="Записать">
+				<input id="noteDel" type="button" value="Очистить">
+			</div>
+			<div style="margin: 15px; height: 1px"></div>
+		</div>
+</body>
+</html>
+
+<script type="text/javascript">
+			//Скрипт кнопок бокового меню
+			function clickHidden() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = true;
+				}
+			function clickDialog() {
+				document.getElementById('Start dialog').hidden = false;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = true;
+				}
+			function clickbranch() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = false;	
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = false;
+				}
+			function clickMenegher() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = false;
+				document.getElementById('url').hidden = true;
+				}
+			//скрипт переключения форм
+			function clickGoForm2() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = false;
+				}
+			function clickGoForm3() {
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = false;
+				}
+				function clickGoForm31() {
+					document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = false;
+					}
+					function clickGoForm312() {
+						document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = false;
+					}
+						function clickGoForm3121() {
+							document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = false;
+						}
+						function clickGoForm3122() {
+							document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3122').hidden = false;
+						}
+				function clickGoForm32() {
+					document.getElementById('Form3').hidden = true;
+					document.getElementById('Form32').hidden = false;
+					}		
+			function clickGoForm4() {
+				document.getElementById('Form3').hidden = true;
+				document.getElementById('Form31').hidden = true;
+				document.getElementById('Form3121').hidden = true;
+				document.getElementById('Form3122').hidden = true;
+				document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = false;
+				}
+				function clickGoForm41() {
+					document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = false;
+				}
+			function clickGoForm5() {
+				document.getElementById('Form4').hidden = true;
+				document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = false;
+				}
+			function clickGoForm6() {
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = false;
+				}
+			function clickGoForm7() {
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = false;
+				document.getElementById('url').hidden = false;
+				}
+			//цветовая плалитра
+			function clickcolorBleck() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#000000";}
+				//сохранение локальной переменой
+				var VarTextColor = "Bleck";
+				LocalStorage.setItem("VarTextColor",Bleck);
+				}
+			function clickcolorWhite() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#efefef";}
+				}
+			function clickcolorBlue() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#33c2ea";}
+				}
+			</script>

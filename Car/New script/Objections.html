@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html leng="ru">
+<head>
+	<title>Script CarPrice</title>
+	<meta charset="utf=8" content="text/html;">
+	<link href="New script.css" rel="stylesheet" type="text/css"
+</head>
+<body>
+	<!--Блок центрального меню-->
+	<ul id="menu" class="menu">
+			<h2 id="logo" style="position: absolute; margin-left: 25px; margin-top: 8px;"><a style="color: #ffffff">Car</a><a style="color: #38b86f;">Price</a><a style="color: #a5a5a5">.ru</a></h2>
+			<li style="margin-left: 320px"><a href="Dialog.html">Диалог</a></li>
+			<li><a href="Basic_information.html">Основная информация</a></li>
+			<li><a href="Objections.html">Возражения</a></li>
+			<li><a href="">Другое</a>
+				<ul>
+					<li><a href="Car_model.html" style="margin-left: -40px;">Марки авто</a></li>
+					<li><a href="" style="margin-left: -40px;">Критерии лида</a></li>
+					<li><a href="" style="margin-left: -40px;">Полезные ссылки</a></li>
+				</ul>
+			</li>
+		<div id="img" class="color-panel"><input src="Image/Color.png" type="image" style="width: 25px; background: transparent; margin-left: 145px; margin-top: 6px;" onclick="document.getElementById('DivColor').hidden = false;"></div>
+		<div id="DivColor" style="margin-left: 800px; margin-top: -26px; background: transparent; width:120px; border: 4px;"hidden="true">
+				<button style="color: #000000; background: transparent; border: 0px;" onclick="clickcolorBleck()">Text</button>
+				<button style="color: #efefef; background: transparent; border: 0px;" onclick="clickcolorWhite()">Text</button>
+				<button style="color: #33c2ea; background: transparent; border: 0px;" onclick="clickcolorBlue()">Text</button>
+				</div>
+		</ul>
+		<!--Кнопка наверх-->
+		<div id="up" align="center"><a href="#" style="color: #efefef;">&#11014;</a><br/></div>
+<!--Блок сайта-->
+	<!--Основной блок контента-->
+	<div id="Content" style="height: 1750px;">
+			<!--Блок вопросов-->
+			<div id="DivCenter">
+				<div style="height: 1px"></div>
+				<div style="margin-left: 15px; height: 411px">
+				-------------------------------------------------------------------------------------------------------------------
+				<b>Возражения </b></br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="NoGo">Я никуда не тороплюсь</b></br>
+				Имя, Ой, это замечательно. Значит у вас есть время просто приехать пройти диагностику и поучаствовать в аукционе. 
+				Устроит предложенная цена, продадите, нет, получите бесплатную и качественную экспертизу. Потом в любой момент сможете снова поучаствовать 
+				в аукционе и так пока цена не будет вас устраивать. Каждый раз цена может меняться, а процесс вам будет уже знаком. Так смотрю еще на 
+				завтра места есть, подскажите, а вы когда сможете подъехать завтра или уже послезавтра получится? </br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="NoTime">Нет времени</b> </br>
+				"Имя, ну это не удивительно вы ведь много времени тратите на то чтобы показывать авто всем потенциальным покупателям, у нас же вы можете 
+				продать авто всего за 2 часа и сразу получить все деньги на банковскую карту или расчетный счет, все максимально быстро. У нас есть свободное время сегодня и завтра, в 
+				какой день вам было бы удобнее?"</br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="NoCar">Я машину не оставлю</b></br>
+				Конечно, я тоже, бы не оставил(а) свою "ласточку" (машину) в незнакомом месте, хоть это и крупная компания, но у нас и не надо ее оставлять. 
+				Давайте подробнее расскажу (далее в скрипт)</br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="NoSale">Я у вас был, стоимость занижена</b> </br>
+				Имя, Это хорошо, что вы у нас уже были, значит знаете процедуру. Смотрите, стоимость может меняться. Итоговая цена всегда разная и  зависит 
+				от многих факторов: от партнерской активности, спроса на конкретную марку и модель и др. Вы можете участвовать в аукционе неограниченное 
+				количество. Предлагаю попробовать еще раз и уже на месте принимать решение. Вот как раз на завтра место есть, завтра подъедите или уже послезавтра? </br>
+				-------------------------------------------------------------------------------------------------------------------
+				<b id="NoMani">Был у вас, низкая цена, не доволен</b> </br>
+				Был у вас, низкая цена, не доволен	Имя, цены на аукционе постоянно меняются т.к. каждый раз в нем принимают участие абсолютно разные люди со всех 
+				регионов нашей страны и соответственно не все располагают желаемой для вас суммой, так же очень много зависит от технического состояния авто, ваш 
+				автомобиль нам кажется интересным и шансы продать его по желаемой цене довольно высоки, рекомендую вам приехать еще раз и продать автомобиль! У нас 
+				есть свободное время сегодня и завтра, в какой день вам было бы удобнее?</br>
+				-------------------------------------------------------------------------------------------------------------------
+				</div>
+			</div>
+	
+			<!--Блок бокового меню-->
+			<div id="DivLeft" style="margin-top: -42.6%;">
+					<hr/>
+					<a style="color: #efefef"><b>Тип возражений</b></a>
+					<hr/>
+					<a class="LeftMenu" href="#NoGo">Я никуда не тороплюсь</a><br/>
+					<hr/>
+					<a class="LeftMenu" href="#NoTime" onclick="clickQuestion()">Нет времени</a><br/>
+					<hr/>
+					<a class="LeftMenu" href="#NoCar" onclick="clickbranch()">Я машину не оставлю</a><br/>
+					<hr/>
+					<a class="LeftMenu" href="#NoSale" onclick="clickMenegher()">Я у вас был, стоимость занижена</a>
+					<hr/>
+					<a class="LeftMenu" href="#NoMani" onclick="clickMenegher()">Был у вас, низкая цена, не доволен</a>
+					<hr/>
+			</div>
+			<!--Блокнот-->	
+			<div id="DivRight">
+				<textarea id="note" name="comment" placeholder="Поле для заметок (НА ДОРАБОТКЕ)" style="background: #a0a0a0"></textarea>
+				<input id="noteSave" type="button" value="Записать">
+				<input id="noteDel" type="button" value="Очистить">
+			</div>
+			<div style="margin: 15px; height: 1px"></div>
+		</div>
+</body>
+</html>
+
+<script type="text/javascript">
+			//Скрипт кнопок бокового меню
+			function clickHidden() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = true;
+				}
+			function clickDialog() {
+				document.getElementById('Start dialog').hidden = false;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = true;
+				}
+			function clickbranch() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = false;	
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = false;
+				}
+			function clickMenegher() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = false;
+				document.getElementById('url').hidden = true;
+				}
+			//скрипт переключения форм
+			function clickGoForm2() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = false;
+				}
+			function clickGoForm3() {
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = false;
+				}
+				function clickGoForm31() {
+					document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = false;
+					}
+					function clickGoForm312() {
+						document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = false;
+					}
+						function clickGoForm3121() {
+							document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = false;
+						}
+						function clickGoForm3122() {
+							document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3122').hidden = false;
+						}
+				function clickGoForm32() {
+					document.getElementById('Form3').hidden = true;
+					document.getElementById('Form32').hidden = false;
+					}		
+			function clickGoForm4() {
+				document.getElementById('Form3').hidden = true;
+				document.getElementById('Form31').hidden = true;
+				document.getElementById('Form3121').hidden = true;
+				document.getElementById('Form3122').hidden = true;
+				document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = false;
+				}
+				function clickGoForm41() {
+					document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = false;
+				}
+			function clickGoForm5() {
+				document.getElementById('Form4').hidden = true;
+				document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = false;
+				}
+			function clickGoForm6() {
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = false;
+				}
+			function clickGoForm7() {
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = false;
+				document.getElementById('url').hidden = false;
+				}
+			//цветовая плалитра
+			function clickcolorBleck() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#000000";}
+				//сохранение локальной переменой
+				var VarTextColor = "Bleck";
+				LocalStorage.setItem("VarTextColor",Bleck);
+				}
+			function clickcolorWhite() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#efefef";}
+				}
+			function clickcolorBlue() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#33c2ea";}
+				}
+			</script>

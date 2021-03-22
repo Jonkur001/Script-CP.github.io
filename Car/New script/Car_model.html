@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html leng="ru">
+<head>
+	<title>Script CarPrice</title>
+	<meta charset="utf=8" content="text/html;">
+	<link href="New script.css" rel="stylesheet" type="text/css"
+</head>
+<body>
+	<!--Блок центрального меню-->
+	<ul id="menu" class="menu">
+			<h2 id="logo" style="position: absolute; margin-left: 25px; margin-top: 8px;"><a style="color: #ffffff">Car</a><a style="color: #38b86f;">Price</a><a style="color: #a5a5a5">.ru</a></h2>
+			<li style="margin-left: 320px"><a href="Dialog.html">Диалог</a></li>
+			<li><a href="Basic_information.html">Основная информация</a></li>
+			<li><a href="Objections.html">Возражения</a></li>
+			<li><a href="">Другое</a>
+				<ul>
+					<li><a href="Car_model.html" style="margin-left: -40px;">Марки авто</a></li>
+					<li><a href="" style="margin-left: -40px;">Критерии лида</a></li>
+					<li><a href="" style="margin-left: -40px;">Полезные ссылки</a></li>
+				</ul>
+			</li>
+		<div id="img" class="color-panel"><input src="Image/Color.png" type="image" style="width: 25px; background: transparent; margin-left: 145px; margin-top: 6px;" onclick="document.getElementById('DivColor').hidden = false;"></div>
+		<div id="DivColor" style="margin-left: 800px; margin-top: -26px; background: transparent; width:120px; border: 4px;"hidden="true">
+				<button style="color: #000000; background: transparent; border: 0px;" onclick="clickcolorBleck()">Text</button>
+				<button style="color: #efefef; background: transparent; border: 0px;" onclick="clickcolorWhite()">Text</button>
+				<button style="color: #33c2ea; background: transparent; border: 0px;" onclick="clickcolorBlue()">Text</button>
+				</div>
+		</ul>
+		<!--Кнопка наверх-->
+		<div id="up" align="center"><a href="#" style="color: #efefef;">&#11014;</a><br/></div>
+<!--Блок сайта-->
+	<!--Основной блок контента-->
+	<div id="Content" style="height: 1750px;">
+			<!--Блок вопросов-->
+			<div id="DivCenter">
+				<div style="height: 1px"></div>
+				<div style="margin: auto; height: 411px">
+				<table border="1" style="margin-top: -100%">
+					<!--Acura-->
+					<tr>
+						<td>Acura &int; Акура</th>
+						<td>Сrossover &int; Кроссовер</td>
+					</tr>
+					<!--Alfa Romeo-->
+					<tr>
+						<td>Alfa Romeo &int; Альфа Ромео</th>
+						<td>Giulietta &int; Джульетта</td>
+					</tr>
+					<!--Audi-->
+					<tr>
+						<td>Audi &int; Ауди</th>
+						<td>Sportback &int; Спортбэк</td>
+					</tr>
+					<!--BMW-->
+					<tr>
+						<td>BMW &int; БМВ</th>
+						<td>X6 &int; Икс6</td>
+					</tr>
+					<!--Cadillac-->
+					<tr>
+						<td>Cadillac &int; Кадиллак</th>
+						<td>CTS &int; </td>
+					</tr>
+					<!--Chery-->
+					<tr>
+						<td>Chery &int; Черри</th>
+						<td>Tiggo &int; Тигго</td>
+					</tr>
+					<!--Chevrolet-->
+					<tr>
+						<td rowspan="2">Chevrolet &int; Шевроле</th>
+						<td>Niva &int; Нива</td>
+					</tr>
+					<tr>
+						<td> Lacetti &int; Лачетти</td>
+					</tr>
+					<!--Chrysler-->
+					<tr>
+						<td>Chrysler &int; Крайслер</th>
+						<td>Cirrus &int; Циррус</td>
+					</tr>
+					<!--Citroen-->
+					<tr>
+						<td>Citroen &int; Ситроен</th>
+						<td>Berlingo &int; Берлинго</td>
+					</tr>
+					<!--Dacia-->
+					<tr>
+						<td>Dacia &int; Дачия</th>
+						<td>Sandero &int; Сандеро</td>
+					</tr>
+					<!--Daewoo-->
+					<tr>
+						<td>Daewoo &int; Дэу</th>
+						<td>Gentra &int; Джентра</td>
+					</tr>
+					<!--Datsun-->
+					<tr>
+						<td>Datsun &int; Датсун</th>
+						<td>Cherry &int; Черри</td>
+					</tr>
+					<!--Dodge-->
+					<tr>
+						<td>Dodge &int; Додж</th>
+						<td>Magnum &int; Магнум</td>
+					</tr>
+					<!--Fiat-->
+					<tr>
+						<td>Fiat &int; Фиат</th>
+						<td>Bravo &int; Браво</td>
+					</tr>
+					<!--Ford-->
+					<tr>
+						<td rowspan="2">Ford &int; Форд</th>
+						<td>Focus &int; Фокус</td>
+					</tr>
+					<tr>
+						<td> Mondeo &int; Мондео</td>
+					</tr>
+					<!--Geely-->
+					<tr>
+						<td>Geely &int; Джили</th>
+						<td>Emgrand &int; Эмгранд</td>
+					</tr>
+					<!--Genesis-->
+					<tr>
+						<td>Genesis &int; Генезис</th>
+						<td>G70 &int;</td>
+					</tr>
+					<!--Great Wall Hover-->
+					<tr>
+						<td>Great Wall Hover &int; Грейт Волл Ховер</th>
+						<td>H3  &int;</td>
+					</tr>
+					<!--Haima-->
+					<tr>
+						<td>Haima &int; Хайма</th>
+						<td>3 &int; </td>
+					</tr>	
+					<!--Honda-->
+					<tr>
+						<td rowspan="2">Honda &int; Хонда</th>
+						<td>Civic &int; Сивик</td>
+					</tr>
+					<tr>
+						<td>Odyssey &int; Одиссей</td>
+					</tr>
+					<!--Hyundai-->
+					<tr>
+						<td rowspan="2">Hyundai &int; Хёндай</th>
+						<td>Tucson &int; Туссан</td>
+					</tr>
+					<tr>
+						<td>Solaris &int; Солярис</td>
+					</tr>
+					<!--Haima-->
+					<tr>
+						<td>Haima &int; Ягуар</th>
+						<td>X-Typ &int; Икс-Тайп</td>
+					</tr>
+					<!--Jeep-->
+					<tr>
+						<td>Jeep &int; Джип</th>
+						<td>Grand Cherokee &int; Гранд Чероки</td>
+					</tr>
+					<!--Kia-->
+					<tr>
+						<td>Kia &int; Киа</th>
+						<td>Optima &int; Оптима</td>
+					</tr>
+					<!--Lada-->
+					<tr>
+						<td rowspan="2">Lada &int; Лада</th>
+						<td>Granta &int; Гранта</td>
+					</tr>
+					<tr>
+						<td> Vesta &int; Веста</td>
+					</tr>
+					<!--Lifan-->
+					<tr>
+						<td>Lifan &int; Ли фан</th>
+						<td>Solano &int; Солано</td>
+					</tr>
+					<!--Land Rover-->
+					<tr>
+						<td>Land Rover &int; Лэнд Ровер</th>
+						<td>Discovery &int; Дискавери</td>
+					</tr>
+					<!--Lexus-->
+					<tr>
+						<td>Lexus &int; Лексус</th>
+						<td>RX &int; </td>
+					</tr>
+					<!--Lincoln-->
+					<tr>
+						<td>Lincoln &int; Линкольн</th>
+						<td>Town &int; Таун</td>
+					</tr>
+					<!--Mini Cooper-->
+					<tr>
+						<td rowspan="2">Mini Cooper&int; Мини Купер</th>
+						<td>Countryman &int; Кантримен</td>
+					</tr>
+					<tr>
+						<td> Hatch &int; Хач</td>
+					</tr>
+					<!--Mazda-->
+					<tr>
+						<td>Mazda &int; Мазда</th>
+						<td>Tribute &int; Трибьют</td>
+					</tr>
+				</div>
+			</div>
+	
+			<!--Блок бокового меню-->
+			<div id="DivLeft" style="margin-top: ; margin-left: -315px">
+					<hr/>
+					<a style="color: #efefef"><b>Тип возражений</b></a>
+					<hr/>
+					<a class="LeftMenu" href="#NoGo">Я никуда не тороплюсь</a><br/>
+					<hr/>
+					<a class="LeftMenu" href="#NoTime" onclick="clickQuestion()">Нет времени</a><br/>
+					<hr/>
+					<a class="LeftMenu" href="#NoCar" onclick="clickbranch()">Я машину не оставлю</a><br/>
+					<hr/>
+					<a class="LeftMenu" href="#NoSale" onclick="clickMenegher()">Я у вас был, стоимость занижена</a>
+					<hr/>
+					<a class="LeftMenu" href="#NoMani" onclick="clickMenegher()">Был у вас, низкая цена, не доволен</a>
+					<hr/>
+			</div>
+			<!--Блокнот-->	
+			<div id="DivRight" style="margin-left: -315px">
+				<textarea id="note" name="comment" placeholder="Поле для заметок (НА ДОРАБОТКЕ)" style="background: #a0a0a0"></textarea>
+				<input id="noteSave" type="button" value="Записать">
+				<input id="noteDel" type="button" value="Очистить">
+			</div>
+			<div style="margin: 15px; height: 1px"></div>
+		</div>
+</body>
+</html>
+
+<script type="text/javascript">
+			//Скрипт кнопок бокового меню
+			function clickHidden() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = true;
+				}
+			function clickDialog() {
+				document.getElementById('Start dialog').hidden = false;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = true;
+				}
+			function clickbranch() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = false;	
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = false;
+				}
+			function clickMenegher() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = false;
+				document.getElementById('url').hidden = true;
+				}
+			//скрипт переключения форм
+			function clickGoForm2() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = false;
+				}
+			function clickGoForm3() {
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = false;
+				}
+				function clickGoForm31() {
+					document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = false;
+					}
+					function clickGoForm312() {
+						document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = false;
+					}
+						function clickGoForm3121() {
+							document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = false;
+						}
+						function clickGoForm3122() {
+							document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3122').hidden = false;
+						}
+				function clickGoForm32() {
+					document.getElementById('Form3').hidden = true;
+					document.getElementById('Form32').hidden = false;
+					}		
+			function clickGoForm4() {
+				document.getElementById('Form3').hidden = true;
+				document.getElementById('Form31').hidden = true;
+				document.getElementById('Form3121').hidden = true;
+				document.getElementById('Form3122').hidden = true;
+				document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = false;
+				}
+				function clickGoForm41() {
+					document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = false;
+				}
+			function clickGoForm5() {
+				document.getElementById('Form4').hidden = true;
+				document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = false;
+				}
+			function clickGoForm6() {
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = false;
+				}
+			function clickGoForm7() {
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = false;
+				document.getElementById('url').hidden = false;
+				}
+			//цветовая плалитра
+			function clickcolorBleck() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#000000";}
+				//сохранение локальной переменой
+				var VarTextColor = "Bleck";
+				LocalStorage.setItem("VarTextColor",Bleck);
+				}
+			function clickcolorWhite() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#efefef";}
+				}
+			function clickcolorBlue() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#33c2ea";}
+				}
+			</script>

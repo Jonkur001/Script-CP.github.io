@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html leng="ru">
+<head>
+	<title>Script CarPrice</title>
+	<meta charset="utf=8" content="text/html;">
+	<link href="New script.css" rel="stylesheet" type="text/css"
+</head>
+<body>
+	<!--Блок центрального меню-->
+	<ul class="menu">
+			<h2 id="logo" style="position: absolute; margin-left: 25px; margin-top: 8px;"><a style="color: #ffffff">Car</a><a style="color: #38b86f;">Price</a><a style="color: #a5a5a5">.ru</a></h2>
+			<li style="margin-left: 320px"><a href="Dialog.html">Диалог</a></li>
+			<li><a href="Basic_information.html">Основная информация</a></li>
+			<li><a href="Objections.html">Возражения</a></li>
+			<li><a href="">Другое</a>
+				<ul>
+					<li><a href="Car_model.html" style="margin-left: -40px;">Марки авто</a></li>
+					<li><a href="" style="margin-left: -40px;">Критерии лида</a></li>
+					<li><a href="" style="margin-left: -40px;">Полезные ссылки</a></li>
+				</ul>
+			</li>
+		<div id="img" class="color-panel"><input src="Image/Color.png" type="image" style="width: 25px; background: transparent; margin-left: 145px; margin-top: 6px;" onclick="document.getElementById('DivColor').hidden = false;"></div>
+		<div id="DivColor" style="margin-left: 800px; margin-top: -26px; background: transparent; width:120px; border: 4px;"hidden="true">
+				<button style="color: #000000; background: transparent; border: 0px;" onclick="clickcolorBleck();">Text</button>
+				<button style="color: #efefef; background: transparent; border: 0px;" onclick="clickcolorWhite()">Text</button>
+				<button style="color: #33c2ea; background: transparent; border: 0px;" onclick="clickcolorBlue()">Text</button>
+				</div>
+		</ul>
+	<div id="Content">
+			<!--Блок вопросов-->
+			<div id="DivCenter">
+				<div style="height: 1px"></div>
+				<div style="margin: 15px; height: 411px">
+					<form class="form" id="Start dialog" name="form">
+					<p><b>Начало диалога</b></p>
+					<p><b>Добрый день <y style="color: #8e8e8e">(пауза)</y>! </b> Я по поводу объявления, подскажите, Ford 8-го года еще продаете?
+						Вас зовут ______ верно? <y style="color: #8e8e8e">(уточнение имени при необходимости)</y>, Я - Мария, сервис Карпрайс,
+						мы официальные партнеры Рольф, Мейджер и сбербанка по выкупу автомобилей. Хотим купить ваш
+						<y style="color: #8e8e8e">(марка автомобиля)</y>. За 2 часа мы его оценим и предложим максимально возможную цену. Устроит цена - купим сразу, не устроит - просто уедете.
+						Единственное, Имя, уточните у вас автомобиль в <a onclick="alert('C лизингом не работаем')">лизинге</a>, кредите или нет?</p>
+					<p>Хорошо, давайте поясню, как у нас все происходит.</p>
+					<p>Приезжаете, мы проверяем документы, осматриваем автомобиль, выставляем на оценку, собираем 
+						предложения от официальных дилеров и других покупателей. Весь процесс виден на экране в 
+						нашем офисе. Если цена вас устроит, подписываете договор и можете<b> сразу же</b> получить деньги. 
+						Для вас это абсолютно бесплатно, комиссия берется с покупателя. Преимущество в том, что вам 
+						не надо ездить в дилерские центры, встречаться и торговаться с несколькими покупателями. 
+						<b>Продажа занимает 2 часа, все юридически безопасно и прозрачно! Чтобы вам было удобно, давайте
+						подберем</b> для вас ближайшее отделение и определимся с датой, Имя, удобнее будет подъехать 
+						завтра или послезавтра? <y style="color: #8e8e8e">(не подходит - еще пару дней)</y></p>
+						<p><input onclick="clickGoForm2()" value="Далее" type="button"></p>
+					</form>
+					
+					<form class="form" id="Form2" hidden="true">
+						<p>1. Ваш автомобиль *марка*модель*год*, верно?</p>
+						<p><input onclick="clickGoForm3()" value="Да" type="button"></p>
+					</form>
+					
+					<form class="form" id="Form3" hidden="true">
+						<p>2. Вы собственник авто и вписаны в ПТС, верно?</p>
+						<p><input onclick="clickGoForm4()" value="Да" type="button"></p>
+						<p><input onclick="clickGoForm31()" value="Нет" type="button"></p>
+						<p><input onclick="clickGoForm32()" value="Автомобиль принадлежит компании" type="button"></p>
+					</form>
+						
+						<form class="form" id="Form31" hidden="true">
+							<p>Есть генеральная доверенность?</p>
+							<p><input onclick="clickGoForm4()" value="Да" type="button"></p>
+							<p><input onclick="clickGoForm312()" value="Нет" type="button"></p>
+						</form>
+							
+							<form class="form" id="Form312" hidden="true">
+								<p>Cобственник сможет подъехать на оформление сделки?</p>
+								<p><input onclick="clickGoForm3121()" value="Да" type="button"></p>
+								<p><input onclick="clickGoForm3122()" value="Нет" type="button"></p>
+							</form>
+								
+								<form class="form" id="Form3121" hidden="true">
+									<p>Вам необходимо подъехать с оригиналами паспорта, ПТС, СТС и копией/фото паспорта собственника 
+									<y style="color: #8e8e8e">(страницы паспорта собственника с фотографией, пропиской и сведения о ранее выданных паспортах)</y></p>
+									<p><input onclick="clickGoForm4()" value="Далее" type="button"></p>
+								</form>
+								
+								<form class="form" id="Form3122" hidden="true">
+									<p>Мы можем записать вас на продажу, если вы оформите генеральную доверенность или собственник 
+									сможет подъехать на заключение сделки. Какой вариант для вас более реальный?</p>
+									<p><input onclick="clickGoForm4()" value="Далее" type="button"></p>
+								</form>
+						<form class="form" id="Form32" hidden="true">
+							<p>Обращаем ваше внимание, что наша компания работает с НДС. Скажите, пожалуйста, автомобиль оформен на ИП или ООО?</p>
+							<p><input onclick="clickGoForm4()" value="Далее" type="button"></p>
+						</form>
+							
+					<form class="form" id="Form4" hidden="true">
+						<p>3. Уточните, у вас оригинал птс на руках или дубликат?</p>
+						<p><input onclick="clickGoForm5()" value="Оригинал" type="button"></p>
+						<p><input onclick="clickGoForm41()" value="Дубликат" type="button"></p>
+					</form>
+						
+						<form class="form" id="Form41" hidden="true">
+							<p>С момента восстановления ПТС прошло 30 дней?</p>
+							<p><input onclick="clickGoForm5()" value="Да" type="button"></p>
+						</form>
+						
+					<form class="form" id="Form5" hidden="true">
+						<p>4. ПТС бумажный или электронный?</p>
+						<p><input onclick="clickGoForm6()" value="Бумажный" type="button"></p>
+						<p><input onclick="clickGoForm6()" value="Электронный" type="button"></p>
+					</form>
+					
+					<form class="form" id="Form6" hidden="true">
+						<p>5. Для оформления встречи мне потребуется ваше согласие на обработку персональных данных. Даете свое согласие?</p>
+						<p><input onclick="clickGoForm7()" value="Да" type="button"></p>
+					</form>
+					
+					<form class="form" id="Form7" hidden="true">
+						
+						<p>Имя, вам удобнее будет в первой или во второй половине дня? <y style="color: #8e8e8e">(далее по сайту, даем варианты по времени, например в 10 или в 11)</y>
+							Для участия в аукционе и, в дальнейшем, продаже , при себе необходимо иметь оригиналы документов ПТС, СТС, Паспорт РФ 
+							<y style="color: #8e8e8e">(и другие документы, в зависимости от ситуации)</y>, у вас же будет возможность взять эти документы, правильно понимаю?</br>
+							Также для того, чтобы мы могли показать вашу машину на аукционе, необходимо, чтоб кузов был чистый. Подскажите, машина 
+							у вас в нужном состоянии, верно?</br>
+							По возможности освободите багажник от личных вещей , а также возьмите с собой запасной комплект шин и ключей, это 
+							повысит стоимость автомобиля при продаже.</p>
+						<p>Ваш номер, заканчивается на <y style="color: #8e8e8e">(последние 4 цифры в номере)</y>, верно?</p>
+						<p>ИМЯ, сейчас создаю заявку. В течение нескольких минут в Ватсап вам прийдет сообщение для подтверждения встречи, ответьте, 
+							пожалуйста на пару вопросов и подтвердите ее. Если возможности нет - вам перезвонит наш менеджер для подтверждения встречи 
+							на *День и время*, по адресу.... Подскажите, вопросы остались еще? Всего доброго. Удачной продажи!</p>
+							<p><input id="GoForm" onclick="clickDialog()" value="Вернуться в начало" type="button"></p>
+					</form>
+				
+					<form class="form" id="Form7" action="https://www.carprice.ru/step2/" target="_blank">
+							<button id="url" hidden="true">Подбор отделения &#9658;</button>
+						</form>
+					
+					<form class="form" id="Form8" hidden="true">
+						<p>Я сейчас создам заявку, в дальнейшем мои коллеги свяжутся с Вами для подтверждения адреса встречи, а также проведут первичную 
+							юридическую проверку. Для этого понадобится уточнить ФИО, дату рождения собственника и ВИН номер автомобиля. Подскажите, если в 
+							течение получаса перезвонит сотрудник, удобно будет подтвердить информацию?</p>
+						<p>Если возражает: зачем такие данные?</p>
+						<p>Так как менеджер поедет с целью проведения аукциона и выкупа машины, мы должны быть уверены, что ни на собственника, ни на авто 
+						нет никаких обременений. Это стандартная процедура перед продажей автомобиля. Подскажите, Вам будет удобно в течение получаса принять звонок?</p>
+					</form>
+				</div>
+			</div>
+			<!--Блок бокового меню-->
+			<div id="DivLeft" style="margin-top: -44.6%;">
+				<hr/>
+				<a class="LeftMenu" onclick="clickDialog()">Начало диалога</a><br/>
+				<hr/>
+				<div onmouseover ="document.getElementById('Question').hidden = false" onmouseout="document.getElementById('Question').hidden = true">
+					<a class="LeftMenu">Список вопросов &cudarrr;</a><br/>
+					<hr/>
+						<form id="Question" hidden="true" style="margin-left: 15px">
+							<a class="LeftMenu" onclick="clickHidden(); document.getElementById('Form2').hidden = false;">1. Ваш автомобиль *марка*модель*год*, верно?</a><br/>
+							<hr/>
+							<a class="LeftMenu" onclick="clickHidden(); document.getElementById('Form3').hidden = false;">2. Вы собственник авто и вписаны в ПТС, верно?</a><br/>
+							<hr/>
+							<a class="LeftMenu" onclick="clickHidden(); document.getElementById('Form31').hidden = false;">Есть генеральная доверенность</a><br/>
+							<hr/>
+							<a class="LeftMenu" onclick="clickHidden(); document.getElementById('Form312').hidden = false;">Cобственник сможет подъехать на оформление сделки?</a><br/>
+							<hr/>
+							<a class="LeftMenu" onclick="clickHidden(); document.getElementById('Form32').hidden = false;">Скажите, пожалуйста, автомобиль оформен на ИП или ООО?</a><br/>
+							<hr/>
+							<a class="LeftMenu" onclick="clickHidden(); document.getElementById('Form4').hidden = false;">3. Уточните, у вас оригинал птс на руках или дубликат?</a><br/>
+							<hr/>
+							<a class="LeftMenu" onclick="clickHidden(); document.getElementById('Form5').hidden = false;">4. ПТС бумажный или электронный?</a><br/>
+							<hr/>
+							<a class="LeftMenu" onclick="clickHidden(); document.getElementById('Form6').hidden = false;">5. Для оформления встречи мне потребуется ваше согласие на обработку персональных данных. Даете свое согласие?</a><br/>
+							<hr/>
+						</form>
+				</div>
+				<a class="LeftMenu" onclick="clickbranch()">Подбор отделения</a><br/>
+				<hr/>
+				<a class="LeftMenu" onclick="clickMenegher()">Выезд менеджера</a>
+				<hr/>
+			</div>
+			<!--Блокнот-->	
+			<div id="DivRight">
+				<textarea id="note" name="comment" placeholder="Поле для заметок (НА ДОРАБОТКЕ)" style="background: #a0a0a0"></textarea>
+				<input id="noteSave" type="button" value="Записать">
+				<input id="noteDel" type="button" value="Очистить">
+			</div>
+			<div style="margin: 15px; height: 1px"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+			//Скрипт кнопок бокового меню
+			function clickHidden() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = true;
+				}
+			function clickDialog() {
+				document.getElementById('Start dialog').hidden = false;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = true;
+				}
+			function clickbranch() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = false;	
+				document.getElementById('Form8').hidden = true;
+				document.getElementById('url').hidden = false;
+				}
+			function clickMenegher() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = true;
+							document.getElementById('Form3122').hidden = true;
+						document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = true;
+				document.getElementById('Form8').hidden = false;
+				document.getElementById('url').hidden = true;
+				}
+			//скрипт переключения форм
+			function clickGoForm2() {
+				document.getElementById('Start dialog').hidden = true;
+				document.getElementById('Form2').hidden = false;
+				}
+			function clickGoForm3() {
+				document.getElementById('Form2').hidden = true;
+				document.getElementById('Form3').hidden = false;
+				}
+				function clickGoForm31() {
+					document.getElementById('Form3').hidden = true;
+					document.getElementById('Form31').hidden = false;
+					}
+					function clickGoForm312() {
+						document.getElementById('Form31').hidden = true;
+						document.getElementById('Form312').hidden = false;
+					}
+						function clickGoForm3121() {
+							document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3121').hidden = false;
+						}
+						function clickGoForm3122() {
+							document.getElementById('Form312').hidden = true;
+							document.getElementById('Form3122').hidden = false;
+						}
+				function clickGoForm32() {
+					document.getElementById('Form3').hidden = true;
+					document.getElementById('Form32').hidden = false;
+					}		
+			function clickGoForm4() {
+				document.getElementById('Form3').hidden = true;
+				document.getElementById('Form31').hidden = true;
+				document.getElementById('Form3121').hidden = true;
+				document.getElementById('Form3122').hidden = true;
+				document.getElementById('Form32').hidden = true;
+				document.getElementById('Form4').hidden = false;
+				}
+				function clickGoForm41() {
+					document.getElementById('Form4').hidden = true;
+					document.getElementById('Form41').hidden = false;
+				}
+			function clickGoForm5() {
+				document.getElementById('Form4').hidden = true;
+				document.getElementById('Form41').hidden = true;
+				document.getElementById('Form5').hidden = false;
+				}
+			function clickGoForm6() {
+				document.getElementById('Form5').hidden = true;
+				document.getElementById('Form6').hidden = false;
+				}
+			function clickGoForm7() {
+				document.getElementById('Form6').hidden = true;
+				document.getElementById('Form7').hidden = false;
+				document.getElementById('url').hidden = false;
+				}
+			//цветовая плалитра
+			function clickcolorBleck() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#000000";}
+				//сохранение локальной переменой
+				localStorage.setItem('VarTextColor', 1);
+				}
+			function clickcolorWhite() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#efefef";}
+				//сохранение локальной переменой
+				localStorage.setItem('VarTextColor', 2);
+				}
+			function clickcolorBlue() {
+			var elements = document.getElementsByClassName("form")
+				for (var i = 0; i < elements.length; i++) {
+				elements[i].style.color = "#33c2ea";}
+				//сохранение локальной переменой
+				localStorage.setItem('VarTextColor', 3);
+				}
+			</script>
